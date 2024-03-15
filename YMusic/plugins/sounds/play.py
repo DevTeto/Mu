@@ -76,9 +76,9 @@ async def _aPlay(_, message):
                     return
                 finish_time = time.time()
                 total_time_taken = str(int(finish_time - start_time)) + " ثانيـة "
-                await m.edit(f"-› تم التشـغيل بنجـاح .\n\n𓏺-› اسم المـلف : [{message.reply_to_message.audio.title[:19]}]({message.reply_to_message.link})\n𓏺-› وقـت المـلف : {message.reply_to_message.audio.duration}\n𓏺-› انتَ تدري شغـلتها خـلال : {total_time_taken}", disable_web_page_preview=True)
+                await m.edit(f"-› تم التشـغيل بنجـاح .\n\n𓏺-› اسم المـلف : [{message.reply_to_message.audio.title[:19]}]({message.reply_to_message.link})\n𓏺-› وقـت المـلف : {message.reply_to_message.audio.duration}\n𓏺-› شغـلتها خـلال : {total_time_taken}", disable_web_page_preview=True)
     elif (len(message.command)) < 2:
-        await message.reply_text("-› الامـر غلـط ترى .")
+        await message.reply_text("-› الامـر غلـط يعم .")
     else:
         m = await message.reply_text("-› تم البُـحث .")
         query = message.text.split(" ", 1)[1]
@@ -117,7 +117,7 @@ async def _raPlay(_, message):
     if (message.reply_to_message) is not None:
         await message.reply_text("-› خـطأ .")
     elif (len(message.command)) < 3:
-        await message.reply_text("-› الأمـر خـطأ .")
+        await message.reply_text("-› الأمـر غلط .")
     else:
         m = await message.reply_text("-› التحميـل .")
         query = message.text.split(" ", 2)[2]
