@@ -1,0 +1,11 @@
+pyrofork
+py-tgcalls
+git+https://github.com/yt-dlp/yt-dlp.git
+tgcrypto
+httpx
+wget
+ffmpeg-python
+aiofiles
+youtube-search-python
+youtube-search
+speedtest-cli

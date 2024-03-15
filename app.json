@@ -1,0 +1,56 @@
+{
+    "name": "سورس تيتو",
+    "logo": "https://telegra.ph/file/b555b7f6138f65c34711b.jpg",
+    "description": "An Advanced Premium Music Bot For Telegram Groups VC.",
+    "keywords": ["music", "voice chat", "telegram"],
+    "repository": "https://github.com/STKR2/all",
+    "stack": "container",
+    "env": {
+        "API_ID": {
+            "description": "لاتغيرها ابدا",
+            "value": "8934899",
+            "required": true
+        },
+        "API_HASH": {
+            "description": "لاتغيرها ابدا",
+            "value": "bf3e98d2c351e4ad06946b4897374a1e", 
+            "required": true
+        },
+        "OWNER_ID": {
+            "description": "مالك",
+            "required": true
+            
+        }, 
+        "PREFIX": {
+            "description": "نقطة",
+            "required": true
+            
+        },
+        "LOG_GROUP_ID": {
+            "description": "كروب",
+            "required": true
+            
+        },
+        "RPREFIX": {
+            "description": "$",
+            "required": true
+            
+        },
+        "SESSION_STRING": {
+            "description": "كود بايروجرام : لازم تستخرجة من بوت هذا @al11ibot",
+            "required": true
+        }
+    },
+    "buildpacks": [
+          {
+              "url": "heroku/python"
+          },
+          {
+              "url": "heroku/nodejs"
+          },
+          {
+              "url": "https://github.com/jonathanong/heroku-buildpack-ffmpeg-latest.git"
+          }
+      ],
+      "stack": "container"
+  }
