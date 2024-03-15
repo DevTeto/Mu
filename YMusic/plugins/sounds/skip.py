@@ -38,7 +38,7 @@ async def _aSkip(_, message):
             if len(chat_queue) == 1:
                 clear_queue(chat_id)
                 await stop(chat_id)
-                await message.reply_text(f"-› ماكـو شـي بقائمـة الانتـظار تم المغـادرة .")
+                await message.reply_text(f"-› مفيش شـي بقائمـة الانتـظار تم المغـادرة .")
                 return
 
             else:
@@ -57,12 +57,12 @@ async def _aSkip(_, message):
                     finish_time = time.time()
                     pop_an_item(chat_id)
                     total_time_taken = str(int(start_time - finish_time)) + " ثانيـة "
-                    await app.send_message(chat_id, f"-› من قائمـة الأنتـظار .\n\n-› اسـم المـلف : [{title}]({link})\n-› وقـت المـلف : {duration}\n-› انتَ تـدري شغلـتها خـلال : {total_time_taken}", disable_web_page_preview=True)
+                    await app.send_message(chat_id, f"-› من قائمـة الأنتـظار .\n\n-› اسـم المـلف : [{title}]({link})\n-› وقـت المـلف : {duration}\n-› شغلـتها خـلال : {total_time_taken}", disable_web_page_preview=True)
                     # return [title, duration, link, finish_time]
                 except Exception as e:
                     return await app.send_message(chat_id, f"Error:- <code>{e}</code>")
     else:
-        return await message.reply_text("-› ماعنـدي صلاحـيات تـرى .")
+        return await message.reply_text("-› ماعنـدي صلاحـيات اصـلا .")
 
 
 async def stop(chat_id):
