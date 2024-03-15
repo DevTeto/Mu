@@ -40,13 +40,13 @@ async def _stop(_, message):
             pass
         await message.reply_text(Text)
     else:
-        return await message.reply_text("-› ماعنـدك صـلاحيـات تـرى .")
+        return await message.reply_text("-› ماعنـدك صـلاحيـات اصـلا .")
 
 
 @app.on_message(command(STOP_COMMAND))
 async def _stop(_, message):
     if (len(message.command)) != 2:
-        await message.reply_text("-› الامـر خطا .")
+        await message.reply_text("-› الامـر غلط .")
     else:
         msg_id = msg_id = message.text.split(" ", 1)[1]
         Text = await userbot.stop(msg_id)
@@ -63,14 +63,14 @@ async def _pause(_, message):
         Text = await userbot.pause(message.chat.id)
         await message.reply_text(Text)
     else:
-        return await message.reply_text("-› ماعنـدك صـلاحيـات تـرى .")
+        return await message.reply_text("-› ماعنـدك صـلاحيـات اصـلا .")
 
 
 @app.on_message(command(PAUSE_COMMAND)
 )
 async def _pause(_, message):
     if (len(message.command)) != 2:
-        await message.reply_text("-› الأمـر خطـا .")
+        await message.reply_text("-› الأمـر غلط .")
     else:
         msg_id = msg_id = message.text.split(" ", 1)[1]
         Text = await userbot.pause(msg_id)
@@ -88,14 +88,14 @@ async def _resume(_, message):
         Text = await userbot.resume(message.chat.id)
         await message.reply_text(Text)
     else:
-        return await message.reply_text("-› ماعنـدك صـلاحيـات تـرى .")
+        return await message.reply_text("-› ماعنـدك صـلاحيـات اصـلا .")
 
 
 @app.on_message(command(RESUME_COMMAND)
 )
 async def _resume(_, message):
     if (len(message.command)) != 2:
-        await message.reply_text("-› الأمـر خطـا .")
+        await message.reply_text("-› الأمـر غلط .")
     else:
         msg_id = msg_id = message.text.split(" ", 1)[1]
         Text = await userbot.resume(msg_id)
@@ -117,7 +117,7 @@ async def _mute(_, message):
 )
 async def _mute(_, message):
     if (len(message.command)) != 2:
-        await message.reply_text("-› الأمـر خطـا .")
+        await message.reply_text("-› الأمـر غلط .")
     else:
         msg_id = msg_id = message.text.split(" ", 1)[1]
         Text = await userbot.mute(msg_id)
@@ -135,7 +135,7 @@ async def _unmute(_, message):
 )
 async def _unmute(_, message):
     if (len(message.command)) != 2:
-        await message.reply_text("-› الأمـر خطـا .")
+        await message.reply_text("-› الأمـر غلط .")
     else:
         msg_id = msg_id = message.text.split(" ", 1)[1]
         Text = await userbot.unmute(msg_id)
@@ -172,7 +172,7 @@ async def _loop(_, message):
         else:
             await message.reply_text("-› تم تفعـيل التكـرار بالفـعل .")
     else:
-        return await message.reply_text("-› ماعنـدك صـلاحيـات تـرى .")
+        return await message.reply_text("-› ماعنـدك صـلاحيـات اصلا .")
 
 
 @app.on_message(command(LOOPEND_COMMAND)
